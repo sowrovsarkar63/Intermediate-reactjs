@@ -1,6 +1,7 @@
 import { BrowserRouter, NavLink, Route, Switch } from "react-router-dom";
 import "./App.css";
 import About from "./components/About";
+import FriendDetail from "./components/FriendDetail";
 import Friends from "./components/Friends";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound";
@@ -75,6 +76,9 @@ function App() {
                     </Route>
                     <Route path="/user">
                         <User></User>
+                    </Route>
+                    <Route path="/friend/:friendID">
+                        <FriendDetail></FriendDetail>
                     </Route>
                     <Route path="*">
                         <NotFound></NotFound>
