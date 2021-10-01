@@ -17,7 +17,7 @@ function Friend(props) {
     return (
         <section style={{ display: "flex", justifyContent: "center" }}>
             <div style={StyleFriend}>
-                <h1>{name}</h1>
+                <h2>{name}</h2>
                 <h3>{email}</h3>
                 <p>{address.city}</p>
             </div>
