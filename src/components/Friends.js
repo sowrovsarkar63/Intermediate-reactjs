@@ -1,12 +1,21 @@
 import React from "react";
-import { useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react/cjs/react.development";
+import Friend from "./Friend";
 
 function Friends(props) {
-    const [users, setusers] = useState([]);
+    const [friends, setFriends] = useState([]);
+
+    useEffect(() => {
+        fetch("https://jsonplaceholder.typicode.com/users ")
+            .then((res) => res.json())
+            .then((data) => setFriends(data));
+    }, []);
 
     return (
         <div>
-            <h1>This is from friend component </h1>
+            {friends.map((friend) => (
+                <Friend key={friend.id} friends={friend}></Friend>
+            ))}
         </div>
     );
 }
