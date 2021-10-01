@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
+import { BrowserRouter, NavLink, Route, Switch } from "react-router-dom";
 import "./App.css";
 import About from "./components/About";
 import Friends from "./components/Friends";
@@ -11,24 +11,52 @@ function App() {
             <BrowserRouter>
                 <nav>
                     <li>
-                        <Link className="link" to="/home">
+                        <NavLink
+                            activeStyle={{
+                                fontWeight: "bold",
+                                color: "red",
+                            }}
+                            className="NavLink"
+                            to="/home"
+                        >
                             Home
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link className="link" to="/about">
+                        <NavLink
+                            activeStyle={{
+                                fontWeight: "bold",
+                                color: "red",
+                            }}
+                            className="NavLink"
+                            to="/about"
+                        >
                             About
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link className="link" to="/friends">
+                        <NavLink
+                            className="NavLink"
+                            activeStyle={{
+                                fontWeight: "bold",
+                                color: "red",
+                            }}
+                            to="/friends"
+                        >
                             Friends
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link className="link" to="/user">
+                        <NavLink
+                            activeStyle={{
+                                fontWeight: "bold",
+                                color: "red",
+                            }}
+                            className="NavLink"
+                            to="/user"
+                        >
                             Users
-                        </Link>
+                        </NavLink>
                     </li>
                 </nav>
                 <Switch>

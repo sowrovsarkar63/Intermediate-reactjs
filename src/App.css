@@ -37,6 +37,9 @@
     }
 }
 /* Navbar style */
+nav {
+    margin-top: 20px;
+}
 nav li {
     list-style: none;
     display: inline;
@@ -44,6 +47,6 @@ nav li {
     padding: 10px;
 }
 
-.link {
+.NavLink {
     text-decoration: none;
 }
