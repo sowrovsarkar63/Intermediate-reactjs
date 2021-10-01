@@ -13,6 +13,7 @@ const FriendDetail = () => {
     return (
         <div>
             <h1>{friendDetails.name}</h1>
+            <h1>{friendDetails.id}</h1>
             <h3>{friendDetails.website}</h3>
         </div>
     );
